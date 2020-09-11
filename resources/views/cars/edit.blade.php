@@ -8,23 +8,31 @@
   {{-- FORM PER MODIFICARE I DATI DELL'AUTO --}}
   <div>
     <label>Manifacturer:</label>
-    <input type="text" name="manifacturer" value="{{old('manifacturer')}}">
+    <input type="text" name="manifacturer" value="{{ old('manifacturer') ? old('manifacturer') : $car->manifacturer}}">
   </div>
+
+  <br>
 
   <div>
     <label>Year:</label>
-    <input type="number" name="year" value="{{old('year')}}">
+    <input type="number" name="year" value="{{ old('year') ? old('year') : $car->year}}">
   </div>
+
+  <br>
 
   <div>
     <label>Engine:</label>
-    <input type="text" name="engine" value="{{old('engine')}}">
+    <input type="text" name="engine" value="{{ old('engine') ? old('engine') : $car->engine}}">
   </div>
+
+  <br>
 
   <div>
     <label>Plate</label>
-    <input type="text" name="plate" value="{{old('plate')}}">
+    <input type="text" name="plate" value="{{ old('plate') ? old('plate') : $car->plate}}">
   </div>
+
+  <br>
 
   {{-- TAGS --}}
   <div>
@@ -37,6 +45,8 @@
     @endforeach
   </div>
 
+  <br>
+
   {{-- USERS --}}
 
   <div>
@@ -46,6 +56,9 @@
       @endforeach
     </select>
   </div>
+
+  <br>
+  
   <input type="submit" value="Conferma">
 
 

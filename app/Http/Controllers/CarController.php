@@ -102,7 +102,9 @@ class CarController extends Controller
      */
     public function update(Request $request, Car $car)
     {
-        //
+      dd($request);
+
+
     }
 
     /**
