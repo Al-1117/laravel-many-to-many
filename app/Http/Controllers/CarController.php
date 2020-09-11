@@ -84,9 +84,13 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Car $car)
     {
-        //
+
+      $users = User::all();
+
+
+      return view('cars.edit', compact('car', 'users'));
     }
 
     /**
@@ -96,7 +100,7 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Car $car)
     {
         //
     }
@@ -117,6 +121,9 @@ class CarController extends Controller
       return redirect()->route('cars.index');
     }
 
+
+
+    // FUNCTIONS
     public function validationData() {
       return [
         'manifacturer' => 'required|max:255',

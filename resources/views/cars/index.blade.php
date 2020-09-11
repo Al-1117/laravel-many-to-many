@@ -1,4 +1,9 @@
+
+
+{{-- Lista delle auto --}}
 <h1>Cars list</h1>
+
+{{-- Inserimento di una nuova auto --}}
 <div>
   <a href="{{route('cars.create')}}">Add new car</a>
 </div>
@@ -9,6 +14,11 @@
 @foreach ($cars as $car)
   <div>
     <a href="{{ route('cars.show', $car)}}" >{{$car->manifacturer}} {{ $car->engine}}</a>
+  </div>
+
+  {{-- Tasto per modificare auto --}}
+  <div>
+    <a href="{{route('cars.edit', $car)}}">Modifica auto</a>
   </div>
 
   {{-- Form per eliminazione --}}
