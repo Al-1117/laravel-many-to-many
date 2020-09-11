@@ -102,7 +102,12 @@ class CarController extends Controller
      */
     public function update(Request $request, Car $car)
     {
-      dd($request);
+      $data = $request->all();
+
+
+      $car->update($data);
+
+      return redirect()->route('cars.show', $car);
 
 
     }

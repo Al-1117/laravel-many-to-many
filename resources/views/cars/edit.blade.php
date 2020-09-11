@@ -52,13 +52,13 @@
   <div>
     <select name="user_id">
       @foreach ($users as $user)
-        <option value="{{$user->id}}">{{$user->name}}</option>
+        <option value="{{$user->id}}" {{ ($user->id == $car->user->id) ? 'selected' : '' }}>{{$user->name}}</option>
       @endforeach
     </select>
   </div>
 
   <br>
-  
+
   <input type="submit" value="Conferma">
 
 
