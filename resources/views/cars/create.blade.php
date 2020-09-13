@@ -1,3 +1,6 @@
+{{-- Estendo il layout base --}}
+@extends('layouts/base')
+
 <h1>Add auto</h1>
 {{-- Validazione form --}}
 @if ($errors->any())

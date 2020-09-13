@@ -1,3 +1,6 @@
+{{-- Estendo il layout base --}}
+@extends('layouts/base')
+
 <h1>Dettagli Auto</h1>
 
 <h2> {{ $car->manifacturer}} {{ $car->engine }}</h2>

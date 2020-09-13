@@ -1,3 +1,6 @@
+{{-- Estendo il layout base --}}
+@extends('layouts/base')
+
 
 <h2>Aggiornamento dati auto</h2>
 

@@ -1,1 +1,8 @@
-//
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Importo i files CSS
+
+@import 'assets/_header.scss';
